@@ -29,3 +29,8 @@
     display: block;
     margin: 0 auto;
   }
+
+  span{
+    color: red;
+    font-size: 40px;
+  }
