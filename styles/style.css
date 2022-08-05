@@ -4,7 +4,7 @@
   border: 2px solid black;
 }
 
-.shape {
+img {
   float: left;
   shape-outside: url(../images/some-shape.png);
   shape-image-threshold: .2;
