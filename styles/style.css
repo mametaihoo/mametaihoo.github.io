@@ -1,11 +1,173 @@
-.box {
-  width: 600px;
-  height: 300px;
-  border: 2px solid black;
+html {
+  font-family: sans-serif;
 }
 
-img {
-  float: left;
-  shape-outside: url(../images/some-shape.png);
-  shape-image-threshold: .2;
+header {
+  padding: 0 0 2em 0;
 }
+
+.header-image {
+  max-width: 100%;
+  margin-bottom: -10px;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 0.3;
+}
+
+.note {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+}
+
+.model-panel-img-first {
+  width: 80%;
+  margin: 0 auto 60px auto;
+  font-size: 0.8em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.model-panel-description-first {
+  width: 80%;
+  margin: 0 auto 60px auto;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.model-image {
+  flex: 2 200px;
+  flex-shrink: 0;
+}
+
+.model-panel-image {
+  max-width: 100%;
+}
+
+.model-description {
+  flex: 1 200px;
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.6em;
+}
+
+.model-description p {
+  font-size: 1.6em;
+  margin-bottom: 5px;
+}
+
+.more-button {
+  display: inline-block;
+  font-size: 1.5em;
+  width: 160px;
+  padding: 10px;
+  margin: 15px;
+  background-color: rgb(78, 78, 78);
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.more-button:hover {
+  color: black;
+}
+
+footer {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 2px solid gray;
+}
+
+footer a {
+  margin-top: 10px;
+  background-color: rgb(56, 117, 228);
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+footer a:hover {
+  color: gray;
+}
+
+footer p {
+  margin: 10px;
+}
+
+
+@media screen and (max-width: 1240px) {
+  /* стили для больших планшетов - начало */
+  .header-image {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .model-panel {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 0.8em;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .note {
+    width: 60%;
+  }
+  }
+
+  
+  @media screen and (max-width: 767px) {
+  /* стили для средних планшетов - начало */
+  h1 {
+    font-size: 2.2em;
+  }
+  
+  header {
+    padding: 0 0 2em 0;
+  }
+
+  .note {
+    width: 60%;
+    font-size: 1.5em;
+  }
+  
+  .model-panel-img-first {
+    flex-direction: column;
+    margin: 0 auto 60px auto;
+    font-size: 0.9em;
+    border: 1px solid gray;
+  }
+  
+  .model-panel-description-first {
+    flex-direction: column;
+    margin: 0 auto 60px auto;
+    font-size: 0.9em;
+    border: 1px solid gray;
+  }
+  }
+
+  @media screen and (max-width: 479px) {
+  /* стили для телефонов - начало */
+  
+  }
