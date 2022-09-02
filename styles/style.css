@@ -2,13 +2,71 @@ html {
   font-family: sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 header {
   padding: 0 0 2em 0;
 }
 
 .header-image {
   max-width: 100%;
-  margin-bottom: -10px;
+  margin: 0;
+}
+
+nav {
+  background-color: rgb(219, 219, 219);
+  margin-top: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul {
+  flex-grow: 1;
+  padding: 5px;
+  list-style-type: none;
+  display: flex;
+  align-items: flex-end;
+  justify-items: center;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav li:nth-of-type(1) {
+  flex-grow: 1;
+  flex-basis: 80px;
+  flex-shrink: 1;
+}
+
+nav li:nth-of-type(2) {
+  flex-grow: 4;
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+
+nav li:nth-of-type(3) {
+  flex-grow: 1;
+  flex-basis: 100px;
+  flex-shrink: 1;
+  text-align: left;
+  padding-left: 3px;
+}
+
+nav div {
+  flex-grow: 4;
+  flex-basis: 50px;
+  text-align: right;
+  padding: 10px 15px 10px 10px;
+}
+
+
+
+nav ul a{
+  text-decoration: none;
 }
 
 h1 {
@@ -88,7 +146,8 @@ h2 {
 
 footer {
   width: 90%;
-  margin: 0 auto;
+  padding: 5px;
+  margin: 10px auto;
   text-align: center;
   border-top: 2px solid gray;
 }
@@ -147,6 +206,7 @@ footer p {
     padding: 0 0 2em 0;
   }
 
+
   .note {
     width: 60%;
     font-size: 1.5em;
@@ -170,6 +230,45 @@ footer p {
     border: 1px solid gray;
   }
   }
+
+  @media screen and (max-width: 500px) {
+    /* стили для телефонов - начало */
+    nav {
+      flex-direction: column-reverse;
+      max-height: 100px;
+      padding-bottom: 5px;
+      margin-top: -4px;
+    }
+
+    nav ul {
+      min-width: 100%;
+      margin: 0 5px;
+    }
+
+    nav li:nth-of-type(1) {
+      flex-grow: 1;
+      flex-basis: 100px;
+    }
+    
+    nav li:nth-of-type(2) {
+      flex-grow: 1;
+      flex-basis: 100px;
+    }
+    
+    nav li:nth-of-type(3) {
+      flex-grow: 1;
+      flex-basis: 100px;
+      text-align: center;
+    }
+
+    nav div {
+      margin-bottom: -5px;
+      margin: 0 5px;
+      max-height: 15px;
+    }
+  } 
+
+
 
   @media screen and (max-width: 406px) {
   /* стили для телефонов - начало */
