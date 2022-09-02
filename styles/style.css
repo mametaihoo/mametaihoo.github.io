@@ -26,7 +26,7 @@ h1 {
 }
 
 .model-panel-img-first {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto 60px auto;
   font-size: 0.8em;
   display: flex;
@@ -35,7 +35,7 @@ h1 {
 }
 
 .model-panel-description-first {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto 60px auto;
   font-size: 0.8em;
   display: flex;
@@ -119,7 +119,7 @@ footer p {
   }
   
   .model-panel {
-    width: 95%;
+    max-width: 95%;
     margin: 0 auto;
     font-size: 0.8em;
     border: 1px solid black;
@@ -151,6 +151,10 @@ footer p {
     width: 60%;
     font-size: 1.5em;
   }
+
+  .model-description {
+    margin-top: -40px;
+  }
   
   .model-panel-img-first {
     flex-direction: column;
@@ -167,7 +171,22 @@ footer p {
   }
   }
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 406px) {
   /* стили для телефонов - начало */
-  
+  .model-description {
+    margin-top: -15%;
+    padding: 0;
   }
+
+  }
+  
+  @media screen and (max-width: 358px) {
+    /* стили для телефонов - начало */
+    .model-description {
+      margin-top: -20%;
+    }
+  
+    }
+  
+  
+  
