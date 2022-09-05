@@ -12,12 +12,14 @@ header {
 
 .header-image {
   max-width: 100%;
+  display: block;
   margin: 0;
 }
 
 nav {
-  background-color: rgb(219, 219, 219);
-  margin-top: -7px;
+  background-color: rgb(159, 159, 159);
+  margin: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -25,6 +27,7 @@ nav {
 
 nav ul {
   flex-grow: 1;
+  margin: 0;
   padding: 5px;
   list-style-type: none;
   display: flex;
@@ -62,8 +65,6 @@ nav div {
   text-align: right;
   padding: 10px 15px 10px 10px;
 }
-
-
 
 nav ul a{
   text-decoration: none;
@@ -109,6 +110,7 @@ h1 {
 
 .model-panel-image {
   max-width: 100%;
+  display: block;
 }
 
 .model-description {
@@ -172,23 +174,6 @@ footer p {
 
 @media screen and (max-width: 1240px) {
   /* стили для больших планшетов - начало */
-  .header-image {
-    max-width: 100%;
-    margin: 0;
-  }
-  
-  .model-panel {
-    max-width: 95%;
-    margin: 0 auto;
-    font-size: 0.8em;
-    border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  header {
-    padding: 0;
-  }
 
   .note {
     width: 60%;
@@ -212,8 +197,13 @@ footer p {
     font-size: 1.5em;
   }
 
+  .model-image {
+    margin: 0;
+  }
+
   .model-description {
-    margin-top: -40px;
+    padding-top: 0;
+    margin-top: 0;
   }
   
   .model-panel-img-first {
@@ -233,16 +223,15 @@ footer p {
 
   @media screen and (max-width: 500px) {
     /* стили для телефонов - начало */
+
     nav {
       flex-direction: column-reverse;
-      max-height: 100px;
-      padding-bottom: 5px;
-      margin-top: -4px;
+      max-height: 65px;
+      padding: 5px;
     }
 
     nav ul {
       min-width: 100%;
-      margin: 0 5px;
     }
 
     nav li:nth-of-type(1) {
@@ -262,19 +251,18 @@ footer p {
     }
 
     nav div {
-      margin-bottom: -5px;
-      margin: 0 5px;
-      max-height: 15px;
+      padding: 5px;
+    }
+
+    .note {
+      width: 80%;
     }
   } 
-
-
 
   @media screen and (max-width: 406px) {
   /* стили для телефонов - начало */
   .model-description {
     margin-top: -15%;
-    padding: 0;
   }
 
   }
