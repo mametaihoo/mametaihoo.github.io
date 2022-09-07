@@ -1,32 +1,10 @@
-
-
-var myImage = document.querySelector('img');
-
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/main.jpg') {
-      myImage.setAttribute ('src','images/warning.png');
-    } else {
-      myImage.setAttribute ('src','images/main.jpg');
-    }
-}
-
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
-
-function setUserName() {
-    var myName = prompt('Please enter your name.');
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
-  }
-
-  if(!localStorage.getItem('name')) {
-    setUserName();
-  } else {
-    var storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Mozilla is cool, ' + storedName;
-  }
-
-myButton.onclick = function() {
-    setUserName();
-}  
+var dropdown = document.querySelector('.dropdown');
+var dropdowncontent = document.querySelector('.dropdown-content');
+var galka1 = document.querySelector('.galka1');
+var galka2 = document.querySelector('.galka2');
+dropdown.onclick = function(){
+  dropdowncontent.classList.toggle('active');
+  galka1.classList.toggle('galka-active1');
+  galka2.classList.toggle('galka-active2');
+    console.log(checked)
+};
