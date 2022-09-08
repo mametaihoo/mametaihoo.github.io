@@ -1,7 +1,7 @@
 /* ОБЩИЕ ПРАВИЛА ДЛЯ СТРАНИЦЫ */
 
 html {
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 *{
@@ -13,22 +13,11 @@ body {
 }
 
 
-
 /* HEADER */
 
 header {
   margin: 0;
 }
-
-.header-image {
-  max-width: 100%;
-  display: block;
-  margin: 0;
-  position: relative;
-  z-index: 2;
-}
-
-
 
 /* ПАНЕЛЬ НАВИГАЦИИ */
 
@@ -119,7 +108,6 @@ nav ul a:hover {
 }
 
 
-
 /* ВЫПАДАЮЩЕЕ МЕНЮ */
 
 .first-link {
@@ -156,84 +144,93 @@ nav ul a:hover {
 /* MAIN */
 
 main {
-  margin: 20px 0;
+  margin: 0;
 }
 
-h1 {
-  font-weight: normal;
-  font-size: 3em;
-  text-align: center;
-  margin: 30px 0;
-}
 
-.note {
-  width: 40%;
-  margin: 30px auto;
-  text-align: center;
-  font-size: 2em;
-}
+/* CONTAINER */
 
-.model-panel-img-first {
-  max-width: 80%;
-  margin: 0 auto 60px auto;
-  font-size: 0.8em;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.model-panel-description-first {
-  max-width: 80%;
-  margin: 0 auto 60px auto;
-  font-size: 0.8em;
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.model-image {
-  flex: 2 200px;
-  flex-shrink: 0;
-}
-
-.model-panel-image {
-  max-width: 100%;
-  display: block;
-}
-
-.model-description {
-  flex: 1 200px;
-  text-align: center;
+.container {
+  width: 90%;
+  margin: 10px auto 0;
   padding: 20px;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 0.6em;
-}
-
-.model-description p {
-  font-size: 1.6em;
-  margin-bottom: 5px;
-}
-
-.more-button {
-  display: inline-block;
-  font-size: 1.5em;
-  width: 160px;
-  padding: 10px;
-  margin: 15px;
-  background-color: rgb(78, 78, 78);
-  color: white;
-  border-radius: 20px;
+h1 {
   text-align: center;
-  text-decoration: none;
+  font-size: 2rem;
+  margin: 0;
 }
 
-.more-button:hover {
-  color: black;
+
+
+/* СЛАЙДЕР */
+
+.slideshow {
+  width: 95%;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  margin: 20px auto;
 }
+
+.empty-image {
+  max-width: 100%;
+  position: relative;
+  top: -1000px;
+}
+
+.slideshow-item {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: slideanim 20s infinite;
+  pointer-events: none;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img {
+  animation-delay: 0s;
+}
+
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img {
+  animation-delay: 7s;
+}
+
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img {
+  animation-delay: 14s;
+}
+
+.slideshow-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 20s infinite;
+}
+
+@keyframes slideanim {
+  16.6%{
+      opacity: 1;
+      pointer-events: auto;
+  }
+  33.3%{
+      opacity: 1;
+      pointer-events: auto;
+  }    
+  49.9%{
+      opacity: 0;
+  }
+}
+@keyframes zoom {
+  66.6%{
+      transform: scale(1.2);
+  }    
+}
+
 
 
 /* FOOTER - ПОДВАЛ */
@@ -264,126 +261,101 @@ footer p {
 }
 
 
-/* СТИЛИ ДЛЯ ЭКРАНОВ МЕНЬШЕ 1240px */
 
-@media screen and (max-width: 1240px) {
-  
-  .note {
-    width: 60%;
-  }
 
-  }
+/* ПРАВИЛА ДЛЯ ЭКРАНОВ МЕНЬШЕ 500px */
+
+@media screen and (max-width: 500px) {
 
   
 
-/* СТИЛИ ДЛЯ ЭКРАНОВ МЕНЬШЕ 767px */
+/* БЛОК НАВИГАЦИИ */
 
-  @media screen and (max-width: 767px) {
+nav {
+  display: block;
+}
 
-  h1 {
-    font-size: 2.2em;
-  }
+nav ul {
+  display: block;
+}
 
-  .note {
-    width: 60%;
-    font-size: 1.5em;
-  }
+nav ul li{
+  padding: 7px 0 7px 0;
+  border-bottom: 1px solid black;
+}
 
-  .model-image {
-    margin: 0;
-  }
-
-  .model-description {
-    padding-top: 0;
-    margin-top: 0;
-  }
-
-  .model-panel-img-first {
-    display: block;
-    border: 1px solid gray;
-  }
-
-  .model-panel-description-first {
-    display: block;
-    border: 1px solid gray;
-  }
-
-  }
+nav ul li:nth-of-type(2) {
+  border-left: none;
   
+}
+
+nav ul li:nth-of-type(3) {
+  border-right: none;
+  border-left: none;
+}
+
+nav ul li:nth-of-type(4) {
+  border-right: none;
+}
+
+.vw-logo {
+  display: none;
+}
+
+.main-link {
+  display: block;
+}
 
 
-  /* СТИЛИ ДЛЯ ЭКРАНОВ МЕНЬШЕ 500px */
+/* ВЫПАДАЮЩЕЕ МЕНЮ */
 
-  @media screen and (max-width: 500px) {
+.dropdown-content {
+  display: none;
+  position: relative;
+  margin: 10px 0 -7px 0;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  box-shadow: none;
+}
 
-    .note {
-      width: 80%;
-    }
+.active {
+  display: block;
+}
 
-    nav {
-      display: block;
-    }
+.dropdown-content a {
+  border-bottom: 1px solid black;
+}
 
-    nav ul {
-      display: block;
-    }
+.dropdown-content a:nth-of-type(4) {
+  border: none;
+}
 
-    nav ul li{
-      padding: 7px 0 7px 0;
-      border-bottom: 1px solid black;
-    }
+.dropdown:hover .dropdown-content {
+  top: 0;
+}
 
-    nav ul li:nth-of-type(2) {
-      border-left: none;
-      
-    }
-    
-    nav ul li:nth-of-type(3) {
-      border-right: none;
-      border-left: none;
-    }
-    
-    nav ul li:nth-of-type(4) {
-      border-right: none;
-    }
 
-    .vw-logo {
-      display: none;
-    }
-    
-    .main-link {
-      display: none;
-    }
 
-    .dropdown-content {
-      display: none;
-      position: relative;
-      margin: 10px 0 -7px 0;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 0;
-      box-shadow: none;
-    }
+/* CONTAINER */
 
-    .active {
-      display: block;
-    }
+.container {
+  width: 100%;
+  padding: 8px;
+}
 
-    .dropdown-content a {
-      border-bottom: 1px solid black;
-    }
 
-    .dropdown-content a:nth-of-type(4) {
-      border: none;
-    }
+/* CONTAINER */
 
-    .dropdown:hover .dropdown-content {
-      top: 0;
-    }
+.slideshow {
+  width: 100%;
+}
 
-    /*
+
+
+/*
     ЧЕРЕЗ ОТДЕЛЬНЫЕ ДИВЫ
 
     .galka1 {
@@ -420,7 +392,7 @@ footer p {
 
 
     /* ЧЕРЕЗ BEFORE И AFTER */
-
+    
     .first-link {
       position: relative;
     }
@@ -453,5 +425,5 @@ footer p {
       transform: rotate(40deg);
     }
 
-    
-  }
+
+}
