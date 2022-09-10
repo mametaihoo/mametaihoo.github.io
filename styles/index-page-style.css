@@ -153,6 +153,7 @@ nav ul a:hover {
 }
 
 
+
 /* MAIN */
 
 main {
@@ -236,6 +237,7 @@ h2 {
 }
 
 
+
 /* FOOTER - ПОДВАЛ */
 
 footer {
@@ -262,6 +264,7 @@ footer a:hover {
 footer p {
   margin: 10px;
 }
+
 
 
 /* СТИЛИ ДЛЯ ЭКРАНОВ МЕНЬШЕ 1240px */
@@ -320,6 +323,10 @@ footer p {
       width: 80%;
     }
 
+
+
+    /* ПАНЕЛЬ НАВИГАЦИИ */
+
     nav {
       display: block;
     }
@@ -329,7 +336,7 @@ footer p {
     }
 
     nav ul li{
-      padding: 7px 0 7px 0;
+      padding: 15px 0 15px 0;
       border-bottom: 1px solid black;
     }
 
@@ -354,6 +361,15 @@ footer p {
     .main-link {
       display: none;
     }
+
+    .city {
+      font-size: 1rem;
+      padding: 13px 15px 13px 10px;
+    }
+
+
+
+    /* ВЫПАДАЮЩЕЕ МЕНЮ */
 
     .dropdown-content {
       display: none;

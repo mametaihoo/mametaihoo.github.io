@@ -393,6 +393,10 @@ h2 {
 }
 
 .relevance {
+  margin: 10px 0;
+}
+
+.relevance p {
   margin: 0;
 }
 
@@ -524,14 +528,13 @@ nav ul {
   display: block;
 }
 
-nav ul li{
-  padding: 7px 0 7px 0;
+nav ul li {
+  padding: 15px 0 15px 0;
   border-bottom: 1px solid black;
 }
 
 nav ul li:nth-of-type(2) {
   border-left: none;
-  
 }
 
 nav ul li:nth-of-type(3) {
@@ -549,6 +552,11 @@ nav ul li:nth-of-type(4) {
 
 .main-link {
   display: block;
+  padding: 15px 0 15px 0;
+}
+
+.city {
+  padding: 13px 15px 13px 10px;
 }
 
 
@@ -673,11 +681,16 @@ nav ul li:nth-of-type(4) {
     }
 
     .article__section_p_first .article__p{
-      text-align: center;
+      text-align: left;
+    }
+
+    .article__section_img_first .article__p{
+      text-align: left;
     }
 
     .article {
       padding: 0;
+      font-size: 1rem;
     }
 
     .article__img {
@@ -688,6 +701,7 @@ nav ul li:nth-of-type(4) {
     .article__p {
       width: 90%;
       margin: 0 auto;
+      padding: 10px 5px 10px 0;
       text-align: center;
     }
 
@@ -710,7 +724,7 @@ nav ul li:nth-of-type(4) {
   
     .vehicles-available {
       margin: 5px 0;
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: rgb(255, 124, 124)
     }
     
@@ -719,13 +733,14 @@ nav ul li:nth-of-type(4) {
     }
     
     .vehicles-price {
+      font-size: 1rem;
       margin: 5px 0;
       padding: 0;
     }
     
     .vehicles-price p {
       margin: 3px 0;
-      font-size: 0.8rem;
+      font-size: 1rem;
       color: rgb(255, 0, 0);
     }
 
@@ -733,28 +748,38 @@ nav ul li:nth-of-type(4) {
 
 
 
-/* ПРАВИЛА ДЛЯ ЭКРАНОВ МЕНЬШЕ 433PX */
-@media screen and (max-width: 433px) {
+
+/* ПРАВИЛА ДЛЯ ЭКРАНОВ МЕНЬШЕ 465PX */
+@media screen and (max-width: 465px) {
+
+  .showrooms__blocks {
+    display: block;
+  }
 
   .showrooms__block {
     display: block;
-    padding: 5px;
-    height: 320px;
+    padding: 10px;
     font-size: 1.1rem;
   }
 
   .showrooms__block__img {
     padding: 5px;
-    height: 50%;
+  }
+
+  .showrooms__block__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .showrooms__block__text {
+    margin: 0;
     padding: 5px;
-    height: 50%;
   }
 
   .relevance {
     font-size: 0.9rem;
+    margin-bottom: 0;
   }
 
 }
