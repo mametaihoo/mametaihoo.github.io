@@ -348,10 +348,14 @@ h2 {
 
 .showrooms__block__img {
   flex: 1 1 150px;
+  height: 100%;
+  padding: 0;
 }
 
 .showrooms__block__img img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .showrooms__block__text {
@@ -502,6 +506,8 @@ footer p {
 
 
 }
+
+
 
 
 /* ПРАВИЛА ДЛЯ ЭКРАНОВ МЕНЬШЕ 500px */
@@ -690,9 +696,16 @@ nav ul li:nth-of-type(4) {
     }
 
 
+    /* SHOWROOMS */
+
     .showrooms__block {
+      margin: 10px 0;
       flex: 0 1 450px;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .showrooms__block__text {
+      padding: 0 5px;
     }
   
     .vehicles-available {
@@ -715,5 +728,33 @@ nav ul li:nth-of-type(4) {
       font-size: 0.8rem;
       color: rgb(255, 0, 0);
     }
+
+}
+
+
+
+/* ПРАВИЛА ДЛЯ ЭКРАНОВ МЕНЬШЕ 433PX */
+@media screen and (max-width: 433px) {
+
+  .showrooms__block {
+    display: block;
+    padding: 5px;
+    height: 320px;
+    font-size: 1.1rem;
+  }
+
+  .showrooms__block__img {
+    padding: 5px;
+    height: 50%;
+  }
+
+  .showrooms__block__text {
+    padding: 5px;
+    height: 50%;
+  }
+
+  .relevance {
+    font-size: 0.9rem;
+  }
 
 }
